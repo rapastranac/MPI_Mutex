@@ -9,9 +9,12 @@ Then, be sure of creating a communicator and window that will be used with the c
 
 To allocate use it this way.
 '''
+
       MPI_Mutex mpi_mutex;
-		  MPI_Comm mutex_Comm;
-		  MPI_Win win_mutex;   
+      
+      MPI_Comm mutex_Comm;
+      
+      MPI_Win win_mutex;   
       
       MPI_Comm_dup(MPI_COMM_WORLD, &mutex_Comm);
       
@@ -37,7 +40,9 @@ To allocate use it this way.
 to use it, where all participant ranks are able to reach it.
 
 '''
+
   // RM in rank 0
+  
   mpi_mutex.lock(0); 
   
   /*
