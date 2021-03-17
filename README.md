@@ -44,7 +44,10 @@ to use it, where all participant ranks are able to reach it.
 	critical section
 	*/
   
-	mpi_mutex.lock(0);
+	mpi_mutex.unlock(0);
 ```
+
+It might be conflicting depending on the server configurations.
+
 
 That's all folks
