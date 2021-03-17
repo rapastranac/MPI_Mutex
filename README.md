@@ -3,7 +3,7 @@ Mutex emulation for MPI
 
 ## Usage
 
-This mutex is aimed to lock a specific remote memory (RM), say rank 0. This means that the boolean that acts as a mutex is located in a specific rank. However, when a critical section is acquired, any other communication can be process safely.
+This mutex is aimed to lock a specific remote memory (RM), say rank 0. This means that the boolean that acts as a mutex is located in a specific rank. However, when a critical section is acquired, any other communication can be process-safe.
 
 Then, be sure of creating a communicator and window that will be used with the corresponding ranks. If all ranks will have to syncrhonised with the RM at rank 0, then it can be any world_communicator.
 
