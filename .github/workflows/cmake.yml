@@ -7,6 +7,21 @@ env:
   BUILD_TYPE: Release
 
 jobs:
+  openmpi:
+      runs-on: ubuntu-latest
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+      steps:
+      - name: download-openmpi
+        run: wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.2.tar.gz
+      - name: extract-openmpi
+        run: tar -xvf ./openmpi-4.0.2.tar.gz
+      - name: configure-openmpi
+        run: ./openmpi-4.0.2/configure --prefix="/home/${USER}/.openmpi"
+      - name: install-openmpi
+        run: |
+          make -j
+          sudo make install
   build:
     # The CMake configure and build commands are platform agnostic and should work equally
     # well on Windows or Mac.  You can convert this to a matrix build if you need
