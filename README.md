@@ -50,5 +50,7 @@ to use it, where all participant ranks are able to reach it.
 
 It might be conflicting depending on the server configurations.
 
+I'd appreciate any comment, also any one who could add some explanation why when setting the compile opcion "-O1" "-O3" "-O3", it fails.
+
 
 That's all folks
