@@ -1,7 +1,7 @@
 # MPI_Mutex
 Mutex emulation for MPI
 
-##Usage
+## Usage
 
 This mutex is aimed to lock a specific remote memory (RM), say rank 0. This means that the boolean that acts as a mutex is located in a specific rank. However, when a critical section is acquired, any other communication can be process safely.
 
