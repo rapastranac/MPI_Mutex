@@ -20,7 +20,7 @@ To allocate use it this way.
 		// mpi mutex **********************************************************************************************
 		MPI_Win_allocate(sizeof(bool), sizeof(bool), MPI::INFO_NULL, mutex_Comm, &mpi_mutex.mutex, &win_mutex);
 		// ********************************************************************************************************
-		mpi_mutex.mutex[0] = false; // initizalition
+		mpi_mutex.mutex[0] = false; // initialization
 	}
 	else
 	{
