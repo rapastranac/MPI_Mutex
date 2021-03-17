@@ -8,7 +8,7 @@ This mutex is aimed to lock a specific remote memory (RM), say rank 0. This mean
 Then, be sure of creating a communicator and window that will be used with the corresponding ranks. If all ranks will have to syncrhonised with the RM at rank 0, then it can be any world_communicator.
 
 To allocate use it this way.
-'''cpp
+```cpp
 
 	MPI_Mutex mpi_mutex;     
 	MPI_Comm mutex_Comm;      
@@ -31,11 +31,11 @@ To allocate use it this way.
 	}
       
 	mpi_mutex.set(mutex_Comm, win_mutex); // mutex initialization      
-'''
+```
 
 to use it, where all participant ranks are able to reach it.
 
-'''cpp
+```cpp
 
 	// RM in rank 0
 	mpi_mutex.lock(0); 
@@ -45,6 +45,6 @@ to use it, where all participant ranks are able to reach it.
 	*/
   
 	mpi_mutex.lock(0);
-'''
+```
 
 That's all folks
