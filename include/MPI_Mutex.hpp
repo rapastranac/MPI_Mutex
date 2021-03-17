@@ -69,7 +69,7 @@ public:
 
     void check_exception(std::string_view msg) {
         try {
-            if (!world_comm || !window || !mutex) {
+            if (!world_comm || !window) {
                 fmt::print("Exception about to occur in {}\n", msg);
                 throw "communicator and/or window and/or mutex not initiliazed";
             }
