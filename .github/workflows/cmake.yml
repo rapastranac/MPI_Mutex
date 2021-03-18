@@ -49,6 +49,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: 'true'
+        token: ${{ secrets.PAT_TOKEN }}
     
    # - name: download openmpi-4.1.0.tar.gz
    #   run: wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.0.tar.gz
