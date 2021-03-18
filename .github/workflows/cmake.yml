@@ -50,9 +50,22 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: install open-mpi
-      run: apt install openmpi-bin libopenmpi-dev
-
+   # - name: download openmpi-4.1.0.tar.gz
+   #   run: wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.0.tar.gz
+   #   
+   # - name: extract-openmpi
+   #   run: tar -xvf ./openmpi-4.1.0.tar.gz
+   # - name: configure-openmpi
+   #   run: ./openmpi-4.1.0/configure --prefix="/home/${USER}/.openmpi"
+   # - name: install-openmpi
+   #   run: |
+   #       make -j 14
+   #       sudo make install
+    
+    - name: install openmpi
+      run: sudo apt install openmpi-bin libopenmpi-dev
+    
+    
     - name: Create Build Environment
       # Some projects don't allow in-source building, so create a separate build directory
       # We'll use this as our working directory for all subsequent commands
