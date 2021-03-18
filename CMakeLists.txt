@@ -27,8 +27,8 @@ include_directories("fmt/include")
 file(GLOB Sources "src/*.cpp")
 
 add_executable(a.out ${Sources}
-        ${CMAKE_CURRENT_SOURCE_DIR}/fmt/src/format.cc
-        ${CMAKE_CURRENT_SOURCE_DIR}/fmt/src/os.cc)
+        fmt/src/format.cc
+        fmt/src/os.cc)
 
 target_link_libraries(a.out ${CMAKE_THREAD_LIBS_INIT}
         ${MPI_LIBRARIES}
