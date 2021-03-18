@@ -49,9 +49,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      with:
-        token: '${{ secrets.https://github.com/fmtlib/fmt.git}}'
-        ref: 'master'
    
    # - name: download openmpi-4.1.0.tar.gz
    #   run: wget https://download.open-mpi.org/release/open-mpi/v4.1/openmpi-4.1.0.tar.gz
@@ -64,6 +61,11 @@ jobs:
    #   run: |
    #       make -j 14
    #       sudo make install
+    - name: install fmt
+      run : |
+          cd MPI_Mutex
+          git clone https://github.com/fmtlib/fmt.git
+          cd ..
    
     - name: install openmpi
       run: sudo apt install openmpi-bin libopenmpi-dev
