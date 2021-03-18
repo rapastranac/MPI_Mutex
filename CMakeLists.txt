@@ -40,4 +40,4 @@ if (MPI_COMPILE_FLAGS)
 endif ()
 
 
-add_test(myTest mpirun -n 4 a.out)
+add_test(myTest mpirun -n 2 a.out)
