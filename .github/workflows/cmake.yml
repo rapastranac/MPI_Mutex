@@ -63,9 +63,8 @@ jobs:
    #       sudo make install
     - name: install fmt
       run : |
-          cd MPI_Mutex
-          git clone https://github.com/fmtlib/fmt.git
-          cd ..
+            git clone https://github.com/fmtlib/fmt.git
+            ls
    
     - name: install openmpi
       run: sudo apt install openmpi-bin libopenmpi-dev
