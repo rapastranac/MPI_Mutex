@@ -17,7 +17,7 @@ add_compile_options("-std=c++2a" "-fconcepts" "-O3")
 #add_definitions("-DDEBUG_COMMENTS")
 
 #sets the executable in main folder
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
 
 include_directories("include")
 include_directories("fmt/include")
@@ -40,4 +40,4 @@ if (MPI_COMPILE_FLAGS)
 endif ()
 
 
-add_test(myTest mpirun -n 4 ../a.out)
+add_test(myTest mpirun -n 4 a.out)
