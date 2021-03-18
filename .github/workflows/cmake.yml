@@ -62,9 +62,6 @@ jobs:
    #       make -j 14
    #       sudo make install
     
-    - name: install fmt
-      run: gh repo clone fmtlib/fmt
-    
     - name: install openmpi
       run: sudo apt install openmpi-bin libopenmpi-dev
     
