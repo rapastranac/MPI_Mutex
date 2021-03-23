@@ -6,39 +6,6 @@ env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
 
-#jobs:
-#  openmpi:
-#      runs-on: ubuntu-latest
-#      env:
-#        TOKEN: ${{ secrets.TOKEN }}
-#      steps:
-#      - name: download-openmpi
-#        run: wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.2.tar.gz
-#      - name: extract-openmpi
-#        run: tar -xvf ./openmpi-4.0.2.tar.gz
-#      - name: configure-openmpi
-#        run: ./openmpi-4.0.2/configure --prefix="/home/${USER}/.openmpi"
-#      - name: install-openmpi
-#        run: |
-#          make -j
-#          sudo make install
-  #build:
-    # The CMake configure and build commands are platform agnostic and should work equally
-    # well on Windows or Mac.  You can convert this to a matrix build if you need
-    # cross-platform coverage.
-    # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
-    #runs-on: ubuntu-latest
-
-#     steps:
-#      - uses: actions/checkout@master
-#        with:
-#          fetch_depth: 1
-#      - name: set-openmpi-path
-#        run: |
-#          export PATH=${PATH}:/home/${USER}/.openmpi/bin/
-#          export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/${USER}/.openmpi/lib/
-#          echo ${PATH}
-#          echo ${LD_LIBRARY_PATH}
 jobs:
   build:
     # The CMake configure and build commands are platform agnostic and should work equally
