@@ -48,7 +48,7 @@ to use it, where all participant ranks are able to reach it.
 	mpi_mutex.unlock(0);
 ```
 
-It might be conflicting depending on the server configurations.
+It might be conflicting depending on the ucx server configurations.
 
 I'd appreciate any comment.
 
